@@ -46,7 +46,6 @@ cleanup:
   - /lib/python3.12/site-packages/torchvision*
   - /lib/libSPIRV*
   - /lib/libshaderc*
-  - /lib/debug/opt
   - /share/cmake
   - /share/doc
   - /share/locale
@@ -784,6 +783,7 @@ modules:
       - -DWITH_RUY=ON
       - -DINTEL_ROOT=/app/opt/oneapi
       - -DCMAKE_CXX_FLAGS=-msse4.1
+      - -DCMAKE_SHARED_LINKER_FLAGS=-Wl,-z,noexecstack
       - -DCMAKE_INSTALL_PREFIX=/app/extensions/cpu
       - -DCMAKE_SYSTEM_PREFIX_PATH=/app
     post-install:
@@ -969,7 +969,6 @@ modules:
       - -DBUILD_SSPLITCPP=OFF
       - -DBUILD_RHVOICE=OFF
       - -DBUILD_BERGAMOT=OFF
-      - -DBUILD_UROMAN=OFF
       - -DBUILD_RUBBERBAND=OFF
       - -DBUILD_FFMPEG=OFF
       - -DBUILD_TAGLIB=OFF
@@ -985,4 +984,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/mkiol/dsnote.git
-        commit: 20b421936076fbdcae6dabefff460b79c1baf539
+        commit: 4c4e8a66c71d9846d41bbda92e2d221c2b581412
