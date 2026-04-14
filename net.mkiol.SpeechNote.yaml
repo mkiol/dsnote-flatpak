@@ -46,7 +46,6 @@ cleanup:
   - /lib/python3.12/site-packages/torchvision*
   - /lib/libSPIRV*
   - /lib/libshaderc*
-  - /lib/debug/opt
   - /share/cmake
   - /share/doc
   - /share/locale
@@ -384,7 +383,7 @@ modules:
       - -DUSE_INTRINSICS_ARMV7_NEONVFPV4=ON
     build-options:
       arch:
-        x86-64:
+        x86_64:
           config-opts:
             - -DBUILD_ARCH=x86-64
         aarch64:
@@ -784,6 +783,7 @@ modules:
       - -DWITH_RUY=ON
       - -DINTEL_ROOT=/app/opt/oneapi
       - -DCMAKE_CXX_FLAGS=-msse4.1
+      - -DCMAKE_SHARED_LINKER_FLAGS=-Wl,-z,noexecstack
       - -DCMAKE_INSTALL_PREFIX=/app/extensions/cpu
       - -DCMAKE_SYSTEM_PREFIX_PATH=/app
     post-install:
@@ -969,7 +969,6 @@ modules:
       - -DBUILD_SSPLITCPP=OFF
       - -DBUILD_RHVOICE=OFF
       - -DBUILD_BERGAMOT=OFF
-      - -DBUILD_UROMAN=OFF
       - -DBUILD_RUBBERBAND=OFF
       - -DBUILD_FFMPEG=OFF
       - -DBUILD_TAGLIB=OFF
