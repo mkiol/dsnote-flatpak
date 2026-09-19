@@ -862,7 +862,7 @@ modules:
         url: https://github.com/CLD2Owners/cld2/archive/b56fa78a2fe44ac2851bae5bf4f4693a0644da7b.zip
         sha256: 6d8681eadbb64d8fcd3c6c620e81bed16d99ff75627324d66ee2d54bf2b7d749
       - type: patch
-        path: ../patches/cld2.patch
+        path: patches/cld2.patch
 
   - name: google_pinyinim
     buildsystem: cmake-ninja
@@ -875,7 +875,7 @@ modules:
         url: https://github.com/aron566/google_pinyinim/archive/1a4fa548031ad53253003f0ad1cc66de0fd42a93.zip
         sha256: b1d09d99421c36bd91856dc21061a8e692d17dba56cb3357a9fd27623794504d
       - type: patch
-        path: ../patches/google_pinyinim.patch
+        path: patches/google_pinyinim.patch
 
   - name: cpppinyin
     buildsystem: cmake-ninja
