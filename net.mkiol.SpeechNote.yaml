@@ -50,7 +50,6 @@ cleanup:
   - /extensions/cpu/lib/python3.13/site-packages/torch/include
   - /lib/libSPIRV*
   - /lib/libshaderc*
-  - /lib/libparakeet*
   - /share/bash-completion
   - /share/cmake
   - /share/doc
